@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورنا سیویل | مهندس امین حصاری</title>
+<link rel="icon" href="https://i.ibb.co/5Wyj1wCV/logo.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B3D42',
+          blueprint: '#123A5C',
+          paper: '#F5F6F8',
+          amber: { 500:'#FBBF24', 600:'#D97706' }
+        },
+        fontFamily: { vazir: ['Vazirmatn','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body{font-family:'Vazirmatn',sans-serif;scroll-behavior:smooth;padding-bottom:76px}
+  @media(min-width:1024px){body{padding-bottom:0}}
+  .blueprint-grid{background-image:linear-gradient(rgba(251,191,36,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(251,191,36,.08) 1px,transparent 1px);background-size:34px 34px}
+  .tech-frame{position:relative}
+  .tech-frame::before{content:'';position:absolute;inset:-7px;border:1px solid rgba(251,191,36,.4);border-radius:16px;pointer-events:none}
+  .tag-mono{font-family:ui-monospace,Consolas,monospace;letter-spacing:.05em}
+  .filter-btn.active{background-color:#F59E0B;color:#0B1220}
+  #mobileMenu{transition:transform .25s ease}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.show{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body class="bg-paper text-gray-800">
+
+<!-- هدر -->
+<header class="bg-ink text-white sticky top-0 z-50 shadow-md">
+  <div class="container mx-auto px-5 py-3.5 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-14 h-14 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md ring-2 ring-amber-500/40">
+        <img src="https://i.ibb.co/5Wyj1wCV/logo.png" alt="varnacivil" class="w-full h-full object-contain">
+      </div>
+      <div class="leading-tight">
+        <span class="block text-lg font-extrabold tracking-wide text-amber-500">varnacivil</span>
+        <span class="block text-[10px] text-gray-400 tag-mono">دفتر فنی و مهندسی عمران</span>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-amber-500 transition">خانه</a>
+
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-amber-500 transition">هنر ساخت <i class="fas fa-chevron-down text-[9px] mt-0.5"></i></button>
+        <div class="absolute top-full right-0 w-72 bg-ink border border-white/10 rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-50">
+          <a href="ville-swiss-guide.html" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">آموزش صفر تا صد ساخت ویلای سوئیسی</a>
+          <a href="amoozesh.html#concrete-structures" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">ساخت با سازه‌های بتنی</a>
+          <a href="amoozesh.html#steel-structures" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">ساخت با سازه‌های فولادی</a>
+          <a href="amoozesh.html#modern-villa" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">ساخت ویلای مدرن</a>
+        </div>
+      </div>
+
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-amber-500 transition">آموزش <i class="fas fa-chevron-down text-[9px] mt-0.5"></i></button>
+        <div class="absolute top-full right-0 w-64 bg-ink border border-white/10 rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-50">
+          <a href="amoozesh.html#autocad" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">آموزش اتوکد</a>
+          <a href="amoozesh.html#project-control" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">آموزش کنترل پروژه</a>
+          <a href="amoozesh.html#project-management" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">مدیریت پروژه</a>
+          <a href="amoozesh.html#execution-training" class="block px-4 py-2.5 text-sm hover:bg-white/5 hover:text-amber-500 transition">آموزش اجرا</a>
+        </div>
+      </div>
+
+      <a href="nemoonekarha.html" class="hover:text-amber-500 transition">نمونه‌کارها</a>
+      <a href="tajarob-kargahi.html" class="hover:text-amber-500 transition">تجارب کارگاهی</a>
+      <a href="index.html#about" class="hover:text-amber-500 transition">درباره من</a>
+      <a href="contact.html" class="hover:text-amber-500 transition">تماس</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="https://wa.me/989389642729" target="_blank" class="hidden sm:flex bg-amber-500 hover:bg-amber-600 text-ink px-4 py-2 rounded-lg font-bold transition text-sm items-center gap-2">
+        <i class="fab fa-whatsapp"></i> مشاوره
+      </a>
+      <button onclick="openMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/15">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- پرده پشت منو -->
+<div id="menuOverlay" onclick="closeMenu()" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden"></div>
+
+<!-- منوی موبایل (نیم‌صفحه) -->
+<aside id="mobileMenu" class="fixed inset-y-0 left-0 z-50 w-[82%] max-w-xs bg-ink -translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+  <div class="flex items-center justify-between p-5 border-b border-white/10">
+    <div class="flex items-center gap-2.5">
+      <div class="w-10 h-10 rounded-lg bg-white p-1 shrink-0"><img src="https://i.ibb.co/5Wyj1wCV/logo.png" class="w-full h-full object-contain"></div>
+      <span class="font-extrabold text-amber-500">varnacivil</span>
+    </div>
+    <button onclick="closeMenu()" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white text-lg leading-none">×</button>
+  </div>
+  <nav class="p-3 text-white text-[15px]">
+    <a href="index.html" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">خانه</a>
+
+    <button onclick="toggleAcc('acc1')" class="w-full flex items-center justify-between px-3 py-3 rounded-lg hover:bg-white/5 font-bold">
+      <span>هنر ساخت</span><i id="acc1-icon" class="fas fa-chevron-down text-xs transition-transform"></i>
+    </button>
+    <div id="acc1" class="hidden pr-2">
+      <a href="ville-swiss-guide.html" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">صفر تا صد ساخت ویلای سوئیسی</a>
+      <a href="amoozesh.html#concrete-structures" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">ساخت با سازه‌های بتنی</a>
+      <a href="amoozesh.html#steel-structures" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">ساخت با سازه‌های فولادی</a>
+      <a href="amoozesh.html#modern-villa" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">ساخت ویلای مدرن</a>
+    </div>
+
+    <button onclick="toggleAcc('acc2')" class="w-full flex items-center justify-between px-3 py-3 rounded-lg hover:bg-white/5 font-bold">
+      <span>آموزش</span><i id="acc2-icon" class="fas fa-chevron-down text-xs transition-transform"></i>
+    </button>
+    <div id="acc2" class="hidden pr-2">
+      <a href="amoozesh.html#autocad" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">آموزش اتوکد</a>
+      <a href="amoozesh.html#project-control" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">آموزش کنترل پروژه</a>
+      <a href="amoozesh.html#project-management" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">مدیریت پروژه</a>
+      <a href="amoozesh.html#execution-training" class="block px-4 py-2.5 mr-2 border-r-2 border-amber-500/40 text-gray-300 text-sm hover:text-amber-500">آموزش اجرا</a>
+    </div>
+
+    <a href="nemoonekarha.html" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">نمونه‌کارها</a>
+    <a href="tajarob-kargahi.html" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">تجارب کارگاهی</a>
+    <a href="contact.html#contractors" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">معرفی پیمانکاران</a>
+    <a href="contact.html#materials" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">معرفی متریال</a>
+    <a href="index.html#about" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">درباره من</a>
+    <a href="contact.html" class="block px-3 py-3 rounded-lg hover:bg-white/5 font-bold">تماس با ما</a>
+  </nav>
+  <div class="p-4">
+    <a href="https://wa.me/989389642729" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition"><i class="fab fa-whatsapp"></i> مشاوره در واتساپ</a>
+  </div>
+</aside>
+
+<script>
+  function openMenu(){document.getElementById('mobileMenu').classList.remove('-translate-x-full');document.getElementById('menuOverlay').classList.remove('hidden');document.body.style.overflow='hidden';}
+  function closeMenu(){document.getElementById('mobileMenu').classList.add('-translate-x-full');document.getElementById('menuOverlay').classList.add('hidden');document.body.style.overflow='';}
+  function toggleAcc(id){
+    const el=document.getElementById(id);
+    const icon=document.getElementById(id+'-icon');
+    el.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  }
+</script>
+
+<!-- هیرو -->
+<section class="relative bg-ink blueprint-grid text-white py-16 px-5 border-b border-amber-500/20 overflow-hidden">
+  <img src="https://i.ibb.co/5Wyj1wCV/logo.png" alt="" class="pointer-events-none select-none absolute -left-16 -bottom-16 w-[420px] opacity-[0.04] rotate-[-8deg]">
+  <div class="container relative mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <span class="tag-mono inline-block bg-amber-500/10 text-amber-500 border border-amber-500/30 px-3 py-1 rounded text-xs">VARNACIVIL — RASHT, GILAN</span>
+      <h1 class="text-3xl md:text-5xl font-black leading-[1.25]">
+        <span class="block text-white">همراه شما در</span>
+        <span class="relative inline-block mt-1 bg-gradient-to-l from-amber-300 via-amber-500 to-amber-600 bg-clip-text text-transparent tracking-tight">
+          ساخت پروژه‌های ساختمانی
+        </span>
+      </h1>
+      <div class="flex items-center gap-2 text-amber-500/60 text-xs tag-mono">
+        <span>0.00</span><span class="flex-1 h-px bg-amber-500/30 max-w-[120px]"></span><span>SCALE 1:1</span>
+      </div>
+      <p class="text-gray-300 text-lg leading-relaxed max-w-lg">
+        از فونداسیون تا تحویل کلید؛ طراحی، اجرا، نظارت و کنترل کیفیت (QC) پروژه‌های ساختمانی، صنعتی و ویلایی را با مدیریت مستقیم انجام می‌دهم.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="nemoonekarha.html" class="bg-amber-500 hover:bg-amber-600 text-ink px-6 py-3 rounded-lg font-bold transition">مشاهده نمونه‌کارها</a>
+        <a href="amoozesh.html" class="border border-white/25 hover:bg-white/10 px-6 py-3 rounded-lg font-bold transition">دوره‌های آموزشی</a>
+      </div>
+    </div>
+
+    <!-- عکس پروفایل در هدر -->
+    <div class="relative flex items-center justify-center py-4">
+      <div class="relative w-full max-w-[380px]">
+        <img src="https://i.ibb.co/35fqrmJs/render-10.jpg" alt="مهندس امین حصاری"
+             class="w-full h-auto rounded-2xl block">
+        <!-- محو شدن تضمینی لبه‌ها با رنگ دقیق زمینه سایت -->
+        <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background:radial-gradient(ellipse 78% 82% at 50% 38%, transparent 60%, #0B3D42 100%)"></div>
+
+        <!-- کارت گفتگو کنار صورت -->
+        <div class="absolute -right-3 top-6 md:-right-8 md:top-10 max-w-[230px] bg-white text-ink rounded-2xl rounded-tr-md shadow-2xl p-4 z-10">
+          <p class="text-sm leading-relaxed">نظارت و کنترل کیفیت (QC) پروژه‌های ساختمانی، صنعتی و ویلایی همراهتان هستم.</p>
+          <p class="mt-2 font-bold text-amber-600 text-xs">— مهندس امین حصاری</p>
+        </div>
+
+        <span class="absolute bottom-3 right-3 tag-mono text-[10px] text-white/40 border border-white/20 px-2 py-1 rounded z-10">PORTRAIT / VC-01</span>
+        <div class="absolute -bottom-5 -left-5 w-16 h-16 md:w-20 md:h-20 rounded-full bg-ink border-2 border-dashed border-amber-500 flex flex-col items-center justify-center text-center shadow-lg rotate-[-8deg] z-10">
+          <img src="https://i.ibb.co/5Wyj1wCV/logo.png" alt="" class="w-6 h-6 md:w-7 md:h-7 object-contain mb-0.5">
+          <span class="text-amber-500 text-[6px] tag-mono leading-none">VARNACIVIL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- چرا ورنا سیویل -->
+<section class="py-16 px-5 container mx-auto">
+  <div class="text-center max-w-xl mx-auto mb-12">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-ink">چرا ورنا سیویل؟</h2>
+    <p class="text-gray-500 mt-3">تجربه‌ی اجرایی واقعی در کنار دانش فنی به‌روز</p>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:border-amber-500 hover:-translate-y-1 transition">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-2xl"><i class="fas fa-tasks"></i></div>
+      <h3 class="font-bold text-sm md:text-base">مدیریت پروژه حرفه‌ای</h3>
+    </div>
+    <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:border-amber-500 hover:-translate-y-1 transition">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-2xl"><i class="fas fa-clipboard-check"></i></div>
+      <h3 class="font-bold text-sm md:text-base">کنترل کیفیت دقیق</h3>
+    </div>
+    <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:border-amber-500 hover:-translate-y-1 transition">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-2xl"><i class="fas fa-award"></i></div>
+      <h3 class="font-bold text-sm md:text-base">مطابق استانداردهای روز</h3>
+    </div>
+    <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:border-amber-500 hover:-translate-y-1 transition">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-2xl"><i class="fas fa-hard-hat"></i></div>
+      <h3 class="font-bold text-sm md:text-base">تیم اجرایی مجرب</h3>
+    </div>
+  </div>
+</section>
+
+<!-- آمار -->
+<section class="bg-white py-10 px-5 border-b border-gray-100">
+  <div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <div class="reveal">
+      <p class="text-3xl md:text-4xl font-extrabold text-amber-600 counter" data-target="30">0</p>
+      <p class="text-gray-500 text-sm mt-1">پروژه اجرا و نظارت‌شده</p>
+    </div>
+    <div class="reveal">
+      <p class="text-3xl md:text-4xl font-extrabold text-amber-600"><span class="counter" data-target="8">0</span>+</p>
+      <p class="text-gray-500 text-sm mt-1">سال تجربه اجرایی</p>
+    </div>
+    <div class="reveal">
+      <p class="text-3xl md:text-4xl font-extrabold text-amber-600"><span class="counter" data-target="4">0</span></p>
+      <p class="text-gray-500 text-sm mt-1">استاندارد بین‌المللی مرجع</p>
+    </div>
+    <div class="reveal">
+      <p class="text-3xl md:text-4xl font-extrabold text-amber-600"><span class="counter" data-target="100">0</span>%</p>
+      <p class="text-gray-500 text-sm mt-1">تعهد به کیفیت اجرا</p>
+    </div>
+  </div>
+</section>
+
+<!-- درباره من (خلاصه) -->
+<section id="about" class="relative bg-ink blueprint-grid text-white py-16 px-5 overflow-hidden">
+  <div class="container relative mx-auto">
+
+    <!-- کارت نور-افکن سفید -->
+    <div class="bg-white text-ink rounded-[2.5rem] shadow-2xl overflow-hidden p-8 md:p-14 max-w-3xl mx-auto text-center space-y-5">
+      <span class="inline-block bg-amber-500 text-ink text-xs font-bold px-4 py-1.5 rounded-full">درباره من</span>
+      <h2 class="text-2xl md:text-4xl font-black leading-snug text-ink">
+        مسیر ساخت پروژه‌تان را<br><span class="bg-gradient-to-l from-amber-500 to-amber-600 bg-clip-text text-transparent">ساده و مطمئن می‌کنیم</span>
+      </h2>
+      <p class="text-gray-600 leading-relaxed max-w-xl mx-auto">
+        من <span class="text-ink font-bold">امین حصاری</span> هستم؛ متخصص برنامه‌ریزی و کنترل پروژه با تجربه در مدیریت زمان‌بندی، پایش پیشرفت و تهیه گزارش‌های فنی. به‌عنوان کارشناس اجرا و کنترل کیفیت (QC)، با استانداردها و فرآیندهای اجرایی پروژه‌های عمرانی و صنعتی آشنا هستم.
+      </p>
+      <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg px-5 py-4 text-sm text-amber-700 leading-relaxed text-right max-w-xl mx-auto">
+        اینجا همون تجربه‌های کارگاهی و اجرایی رو می‌ذارم که دوست دارم پیش از شروع پروژه، شما هم بدونید.
+      </div>
+      <a href="contact.html" class="inline-flex items-center gap-2 bg-ink hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-bold transition">ارتباط با من <i class="fas fa-arrow-left text-xs"></i></a>
+    </div>
+
+    <!-- ویژگی‌های کپسولی -->
+    <div class="grid sm:grid-cols-3 gap-4 mt-8">
+      <div class="reveal bg-slate-900/70 border border-white/10 rounded-2xl p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl shrink-0"><i class="fas fa-drafting-compass"></i></div>
+        <div>
+          <p class="font-bold text-sm">طراحی و محاسبات دقیق</p>
+          <p class="text-xs text-gray-400 mt-0.5">مطابق استانداردهای روز</p>
+        </div>
+      </div>
+      <div class="bg-slate-900/70 border border-white/10 rounded-2xl p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl shrink-0"><i class="fas fa-hard-hat"></i></div>
+        <div>
+          <p class="font-bold text-sm">اجرای کارگاهی مطمئن</p>
+          <p class="text-xs text-gray-400 mt-0.5">نظارت مستقیم مهندس</p>
+        </div>
+      </div>
+      <div class="bg-slate-900/70 border border-white/10 rounded-2xl p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl shrink-0"><i class="fas fa-clipboard-check"></i></div>
+        <div>
+          <p class="font-bold text-sm">کنترل کیفیت شفاف</p>
+          <p class="text-xs text-gray-400 mt-0.5">گزارش‌دهی مرحله‌به‌مرحله</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- مسیر حرفه‌ای -->
+<section class="py-16 px-5 container mx-auto">
+  <div class="text-center max-w-xl mx-auto mb-14">
+    <span class="tag-mono text-amber-600 text-xs">TIMELINE</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold text-ink mt-1">مسیر حرفه‌ای</h2>
+  </div>
+  <div class="relative max-w-2xl mx-auto">
+    <div class="absolute top-0 bottom-0 right-[15px] md:right-1/2 w-px bg-amber-500/30"></div>
+    <div class="space-y-10">
+      <div class="relative pr-10 md:pr-0 md:grid md:grid-cols-2 md:gap-10 reveal">
+        <div class="absolute right-0 md:right-1/2 md:translate-x-1/2 top-1 w-8 h-8 rounded-full bg-amber-500 text-ink flex items-center justify-center font-bold tag-mono text-xs">01</div>
+        <div class="md:text-left md:col-start-2 md:pl-10">
+          <h4 class="font-bold text-ink">ورود به صنعت ساخت‌وساز</h4>
+          <p class="text-gray-500 text-sm mt-1">شروع فعالیت در نظارت و اجرای پروژه‌های عمرانی</p>
+        </div>
+      </div>
+      <div class="relative pr-10 md:pr-0 md:grid md:grid-cols-2 md:gap-10 reveal">
+        <div class="absolute right-0 md:right-1/2 md:translate-x-1/2 top-1 w-8 h-8 rounded-full bg-amber-500 text-ink flex items-center justify-center font-bold tag-mono text-xs">02</div>
+        <div class="md:col-start-1 md:row-start-1 md:text-left md:pr-10">
+          <h4 class="font-bold text-ink">کنترل کیفیت جوش و اتصالات فولادی</h4>
+          <p class="text-gray-500 text-sm mt-1">بازرسی و QC در پروژه‌های صنعتی بزرگ‌مقیاس</p>
+        </div>
+      </div>
+      <div class="relative pr-10 md:pr-0 md:grid md:grid-cols-2 md:gap-10 reveal">
+        <div class="absolute right-0 md:right-1/2 md:translate-x-1/2 top-1 w-8 h-8 rounded-full bg-amber-500 text-ink flex items-center justify-center font-bold tag-mono text-xs">03</div>
+        <div class="md:text-left md:col-start-2 md:pl-10">
+          <h4 class="font-bold text-ink">مدیریت زیرسازه‌های راه‌آهن</h4>
+          <p class="text-gray-500 text-sm mt-1">نظارت بر اجرای پی و پایه‌های پل در پروژه رشت-آستارا</p>
+        </div>
+      </div>
+      <div class="relative pr-10 md:pr-0 md:grid md:grid-cols-2 md:gap-10 reveal">
+        <div class="absolute right-0 md:right-1/2 md:translate-x-1/2 top-1 w-8 h-8 rounded-full bg-amber-500 text-ink flex items-center justify-center font-bold tag-mono text-xs">04</div>
+        <div class="md:col-start-1 md:row-start-1 md:text-left md:pr-10">
+          <h4 class="font-bold text-ink">تاسیس varnacivil</h4>
+          <p class="text-gray-500 text-sm mt-1">ارائه خدمات یکپارچه مدیریت، اجرا و آموزش مهندسی عمران</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- نمونه پروژه‌ها -->
+<section class="py-16 px-5 container mx-auto">
+  <div class="flex items-end justify-between mb-10">
+    <div>
+      <span class="tag-mono text-amber-600 text-xs">PROJECTS</span>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-ink mt-1">پروژه‌های منتخب</h2>
+    </div>
+    <a href="nemoonekarha.html" class="hidden sm:block text-amber-600 font-bold hover:underline whitespace-nowrap">مشاهده همه ←</a>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition">
+      <div class="tech-frame m-4"><img src="https://i.ibb.co/TxJVW4Lg/image.jpg" class="w-full h-48 object-cover rounded-xl"></div>
+      <div class="px-5 pb-5">
+        <span class="text-amber-600 text-xs font-bold">طراحی و اجرا</span>
+        <h4 class="font-bold mt-1">ویلای سوئیسی (A-Frame)</h4>
+        <p class="text-sm text-gray-500">فومن، گیلان</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition">
+      <div class="tech-frame m-4"><img src="https://i.ibb.co/Kj0tkQRK/image.jpg" class="w-full h-48 object-cover rounded-xl"></div>
+      <div class="px-5 pb-5">
+        <span class="text-amber-600 text-xs font-bold">سازه فولادی</span>
+        <h4 class="font-bold mt-1">توسعه بیمارستان پورسینا</h4>
+        <p class="text-sm text-gray-500">نصب اسکلت فولادی در سایت</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition">
+      <div class="tech-frame m-4"><img src="https://i.ibb.co/p6LzPYNH/image.jpg" class="w-full h-48 object-cover rounded-xl"></div>
+      <div class="px-5 pb-5">
+        <span class="text-amber-600 text-xs font-bold">زیرسازه پل</span>
+        <h4 class="font-bold mt-1">راه‌آهن رشت-آستارا</h4>
+        <p class="text-sm text-gray-500">بتن‌ریزی پایه‌های پل</p>
+      </div>
+    </div>
+  </div>
+  <div class="sm:hidden mt-6 flex gap-4 justify-center text-sm">
+    <a href="nemoonekarha.html" class="text-amber-600 font-bold">نمونه‌کارها ←</a>
+    <a href="tajarob-kargahi.html" class="text-amber-600 font-bold">تجارب کارگاهی ←</a>
+  </div>
+</section>
+
+<!-- دوره‌ها خلاصه -->
+<section class="bg-ink text-white py-16 px-5">
+  <div class="container mx-auto">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <span class="tag-mono text-amber-500 text-xs">COURSES</span>
+        <h2 class="text-2xl md:text-3xl font-extrabold mt-1">دوره‌های آموزشی</h2>
+      </div>
+      <a href="amoozesh.html" class="hidden sm:block text-amber-500 font-bold hover:underline">همه دوره‌ها ←</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition">
+        <div class="text-amber-500 text-2xl mb-3"><i class="fas fa-home"></i></div>
+        <h3 class="font-bold text-sm">صفر تا صد ویلای سوئیسی</h3>
+      </div>
+      <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition">
+        <div class="text-amber-500 text-2xl mb-3"><i class="fas fa-cubes"></i></div>
+        <h3 class="font-bold text-sm">سازه‌های بتن آرمه</h3>
+      </div>
+      <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition">
+        <div class="text-amber-500 text-2xl mb-3"><i class="fas fa-industry"></i></div>
+        <h3 class="font-bold text-sm">سازه‌های فولادی</h3>
+      </div>
+      <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition">
+        <div class="text-amber-500 text-2xl mb-3"><i class="fas fa-laptop-code"></i></div>
+        <h3 class="font-bold text-sm">اتوکد، کنترل و مدیریت پروژه</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-14 px-5 container mx-auto">
+  <div class="bg-amber-500 rounded-2xl px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-ink">
+    <div>
+      <h3 class="text-xl md:text-2xl font-extrabold">آماده شروع پروژه بعدی هستید؟</h3>
+      <p class="mt-1 text-ink/80">برای مشاوره رایگان با ما در واتساپ در تماس باشید.</p>
+    </div>
+    <a href="https://wa.me/989389642729" target="_blank" class="bg-ink text-white px-7 py-3 rounded-lg font-bold hover:bg-slate-800 transition flex items-center gap-2 whitespace-nowrap">
+      <i class="fab fa-whatsapp"></i> شروع گفتگو
+    </a>
+  </div>
+</section>
+
+<!-- فوتر -->
+<footer class="bg-slate-950 text-gray-400 pt-12 pb-8 px-5 border-t border-slate-900">
+  <div class="container mx-auto flex flex-col items-center text-center gap-4">
+    <div class="w-16 h-16 rounded-xl bg-white p-2 shadow-lg ring-2 ring-amber-500/40">
+      <img src="https://i.ibb.co/5Wyj1wCV/logo.png" alt="varnacivil" class="w-full h-full object-contain">
+    </div>
+    <div>
+      <p class="text-white font-extrabold text-lg">varnacivil</p>
+      <p class="text-xs text-gray-500 tag-mono mt-1">دفتر فنی و مهندسی عمران — رشت، گیلان</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-5 text-sm mt-2">
+      <a href="index.html" class="hover:text-amber-500 transition">خانه</a>
+      <a href="nemoonekarha.html" class="hover:text-amber-500 transition">نمونه‌کارها</a>
+      <a href="tajarob-kargahi.html" class="hover:text-amber-500 transition">تجارب کارگاهی</a>
+      <a href="amoozesh.html" class="hover:text-amber-500 transition">آموزش</a>
+      <a href="contact.html" class="hover:text-amber-500 transition">تماس</a>
+    </div>
+    <p class="text-xs text-gray-600 mt-4">© ۱۴۰۵ تمامی حقوق مادی و معنوی این سایت متعلق به <span class="text-amber-500">varnacivil</span> می‌باشد.</p>
+  </div>
+</footer>
+
+<!-- منوی پایین موبایل -->
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,.06)] flex justify-around items-center py-2">
+  <a href="index.html" class="flex flex-col items-center gap-1 text-gray-500 text-xs font-bold"><i class="fas fa-house text-lg"></i> خانه</a>
+  <a href="nemoonekarha.html" class="flex flex-col items-center gap-1 text-gray-500 text-xs font-bold"><i class="fas fa-images text-lg"></i> نمونه‌کارها</a>
+  <a href="tajarob-kargahi.html" class="flex flex-col items-center gap-1 text-gray-500 text-xs font-bold"><i class="fas fa-hard-hat text-lg"></i> تجارب کارگاهی</a>
+  <a href="amoozesh.html" class="flex flex-col items-center gap-1 text-gray-500 text-xs font-bold"><i class="fas fa-graduation-cap text-lg"></i> آموزش</a>
+  <a href="contact.html" class="flex flex-col items-center gap-1 text-gray-500 text-xs font-bold"><i class="fas fa-phone text-lg"></i> تماس</a>
+</nav>
+
+
+<!-- دکمه شناور واتساپ -->
+<a href="https://wa.me/989389642729" target="_blank" class="fixed bottom-24 lg:bottom-8 left-5 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-lg flex items-center justify-center text-2xl transition">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- بازگشت به بالا -->
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="hidden fixed bottom-24 lg:bottom-8 right-5 z-40 w-11 h-11 bg-ink text-amber-500 rounded-full shadow-lg items-center justify-center">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  // نمایش/مخفی دکمه بازگشت به بالا
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('toTop');
+    if (window.scrollY > 500) { btn.classList.remove('hidden'); btn.classList.add('flex'); }
+    else { btn.classList.add('hidden'); btn.classList.remove('flex'); }
+  });
+
+  // انیمیشن ظاهرشدن هنگام اسکرول
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // شمارنده آماری
+  const counters = document.querySelectorAll('.counter');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.target;
+      let cur = 0;
+      const step = Math.max(1, Math.ceil(target / 40));
+      const tick = () => {
+        cur += step;
+        if (cur >= target) { el.textContent = target; return; }
+        el.textContent = cur;
+        requestAnimationFrame(tick);
+      };
+      tick();
+      cio.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => cio.observe(c));
+</script>
+</body>
+</html>
